@@ -13,6 +13,7 @@ a:hover {
 }
 
 .article_section {
+    margin-bottom: 120px;
     h2 {
         font-family: 'Montserrat', sans-serif;
         color: #000000;
@@ -147,12 +148,15 @@ a:hover {
     }
 }
 
-.about_section {
-    background-color:  #f8fafa;
+.section_container {
     padding-top: 128px;
     padding-bottom: 120px;
+}
+
+.about_section {
+    background-color:  #f8fafa;
+    
     .mine_section {
-        margin-top: 130px;
         .carousel__mine_section {}
         .text__mine_section {
             padding: 0 30px;
@@ -176,5 +180,20 @@ a:hover {
             }
         }
 
+    }
+}
+
+.works_section {
+    .gallery_works {
+        .prev_work {
+            float: left;
+            width: 33%;
+            padding: 0.5%;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            
+        }
     }
 }
