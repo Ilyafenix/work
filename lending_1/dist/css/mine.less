@@ -12,6 +12,29 @@ a:hover {
     text-decoration: none;
 }
 
+.article_section {
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        letter-spacing: .1em;
+    }
+    p {
+        font-family: 'Merriweather', serif;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+
+    }
+}
+
 .header_section {
     background-color: rgba(239, 240, 242, 0.99);
     height: 100vh;
@@ -47,7 +70,9 @@ a:hover {
                     width: 30px;
                     height: 30px;
                     position: relative;
-                    span, span::before, span::after {
+                    span,
+                    span::before,
+                    span::after {
                         position: absolute;
                         background-color: rgba(0, 0, 0, 0.6);
                         width: 30px;
@@ -56,17 +81,18 @@ a:hover {
                         margin-top: -2px;
                         border-radius: 2px;
                     }
-                    
-                    span::before, span::after {
+
+                    span::before,
+                    span::after {
                         content: '';
-                        
+
                     }
-                    
+
                     span::before {
-                        transform:translateY(-9px)
+                        transform: translateY(-9px)
                     }
                     span::after {
-                        transform:translateY(9px)
+                        transform: translateY(9px)
                     }
                 }
             }
@@ -118,5 +144,37 @@ a:hover {
                 }
             }
         }
+    }
+}
+
+.about_section {
+    background-color:  #f8fafa;
+    padding-top: 128px;
+    padding-bottom: 120px;
+    .mine_section {
+        margin-top: 130px;
+        .carousel__mine_section {}
+        .text__mine_section {
+            padding: 0 30px;
+            h3 {
+                font-family: 'Merriweather', serif;
+                color: #000000;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 28px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                letter-spacing: 0.1em;
+            }
+            p {
+                font-family: 'Raleway', sans-serif;
+                color: #000000;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+        }
+
     }
 }
