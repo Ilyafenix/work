@@ -265,3 +265,54 @@ a:hover {
   font-size: 20px;
   cursor: pointer;
 }
+.team_section .profile_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.team_section .profile_gallery .profile {
+  width: 32%;
+  height: 440px;
+  margin: 0.5%;
+  overflow: hidden;
+  position: relative;
+}
+.team_section .profile_gallery .profile .img__profile {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.team_section .profile_gallery .profile .disc_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile {
+  background-color: rgba(109, 246, 235, 0.98);
+  box-shadow: 3px 6px 16px 0px rgba(20, 20, 21, 0.18);
+  padding: 30px;
+  position: relative;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile .triangle {
+  background: green;
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 15px;
+  border: 10px solid transparent;
+  border-left: 20px solid green;
+}
