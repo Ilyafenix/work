@@ -297,22 +297,120 @@ a:hover {
   justify-content: flex-end;
 }
 .team_section .profile_gallery .profile .disc_container .disc__profile {
+  display: none;
   background-color: rgba(109, 246, 235, 0.98);
   box-shadow: 3px 6px 16px 0px rgba(20, 20, 21, 0.18);
   padding: 30px;
   position: relative;
 }
 .team_section .profile_gallery .profile .disc_container .disc__profile .triangle {
-  background: green;
-  position: relative;
-  width: 100px;
-  height: 50px;
-}
-.team_section .profile_gallery .profile .disc_container .disc__profile::after {
-  content: '';
+  width: 0;
+  height: 0;
+  border-left: 21px solid transparent;
+  border-right: 21px solid transparent;
+  border-bottom: 42px solid rgba(113, 246, 236, 0.97);
   position: absolute;
-  right: -30px;
-  top: 15px;
-  border: 10px solid transparent;
-  border-left: 20px solid green;
+  top: -20px;
+  left: 11;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile h3 {
+  font-family: 'Merriweather', serif;
+  color: #272727;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile h3 span {
+  color: #766f6f;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile p {
+  font-family: 'Raleway', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.team_section .profile_gallery .profile .disc_container .disc__profile .social i {
+  color: #000000;
+  font-size: 13.48px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 10px;
+}
+.team_section .profile_gallery .profile .disc_container:hover .disc__profile {
+  display: block;
+}
+.says_section {
+  background-color: #f9fbfb;
+}
+.says_section .says_carousel .text__says_carousel .disc_text {
+  border-radius: 3px;
+  background-color: #eaebed;
+  padding: 80px;
+}
+.says_section .says_carousel .text__says_carousel .disc_text h3 {
+  font-family: 'Merriweather', serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.says_section .says_carousel .text__says_carousel .disc_text h3 span {
+  color: #787878;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.says_section .says_carousel .text__says_carousel .disc_text p {
+  font-family: 'Raleway', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.says_section .says_carousel .text__says_carousel .disc_text .stars {
+  color: #f2da3b;
+  text-align: center;
+}
+.says_section .says_carousel .text__says_carousel .disc_text .stars i {
+  margin: 5px;
+}
+.says_section .says_carousel .text__says_carousel .coursor {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.says_section .says_carousel .text__says_carousel .coursor button {
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 4px 7px 11px 0px rgba(20, 20, 21, 0.05);
+  width: 53px;
+  height: 53px;
+  margin-left: 30px;
+}
+.says_section .says_carousel .text__says_carousel .coursor button i {
+  color: rgba(0, 0, 0, 0.3);
+}
+.says_section .says_carousel .text__says_carousel .coursor button:hover {
+  border-radius: 3px;
+  background-color: #71f6eb;
+  box-shadow: 3px 5px 11px 0px rgba(20, 20, 21, 0.1);
+  width: 53px;
+}
+.says_section .says_carousel .text__says_carousel .coursor button:hover i {
+  color: rgba(0, 0, 0, 0.67);
 }

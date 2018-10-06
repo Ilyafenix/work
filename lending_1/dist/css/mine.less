@@ -342,7 +342,10 @@ a:hover {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+
+
                 .disc__profile {
+                    display: none;
                     background-color: rgba(109, 246, 235, 0.98);
                     box-shadow: 3px 6px 16px 0px rgba(20, 20, 21, 0.18);
                     padding: 30px;
@@ -350,9 +353,49 @@ a:hover {
                     .triangle {
                         width: 0;
                         height: 0;
-                        border-left: 50px solid transparent;
-                        border-right: 50px solid transparent;
-                        border-bottom: 100px solid red;
+                        border-left: 21px solid transparent;
+                        border-right: 21px solid transparent;
+                        border-bottom: 42px solid rgba(113, 246, 236, 0.97);
+                        position: absolute;
+                        top: -20px;
+                        left: 11; //                        background-color:  rgba(113, 246, 236, 0.97);
+                    }
+                    h3 {
+                        font-family: 'Merriweather', serif;
+                        color: #272727;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        span {
+                            color: #766f6f;
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            text-transform: capitalize;
+                            font-style: italic;
+                        }
+                    }
+                    p {
+                        font-family: 'Raleway', sans-serif;
+                        color: #000000;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+                    .social {
+                        i {
+                            color: #000000;
+                            font-size: 13.48px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                &:hover {
+                    .disc__profile {
+                        display: block;
                     }
                 }
 
@@ -360,3 +403,79 @@ a:hover {
             }
         }
     }
+}
+
+.says_section {
+    background-color: #f9fbfb;
+    .says_carousel {
+        .text__says_carousel {
+
+
+            .disc_text {
+                border-radius: 3px;
+                background-color: #eaebed;
+                padding: 80px;
+                h3 {
+                    font-family: 'Merriweather', serif;
+                    color: #000000;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    span {
+                        color: #787878;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        font-style: italic;
+                        text-transform: capitalize;
+                    }
+                }
+                p {
+                    font-family: 'Raleway', sans-serif;
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                }
+                .stars {
+                    color: #f2da3b;
+                    text-align: center;
+                    i {
+                        margin: 5px;
+                    }
+                }
+            }
+            .coursor {
+                margin-top: 30px;
+                display: flex;
+                justify-content: flex-end;
+                button {
+                    border-radius: 3px;
+                    background-color: #ffffff;
+                    box-shadow: 4px 7px 11px 0px rgba(20, 20, 21, 0.05);
+                    width: 53px;
+                    height: 53px;
+                    margin-left: 30px;
+                    i {
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+                    &:hover {
+                        border-radius: 3px;
+                        background-color: #71f6eb;
+                        box-shadow: 3px 5px 11px 0px rgba(20, 20, 21, 0.1);
+                        width: 53px;
+                        i {
+                            color:  rgba(0, 0, 0, 0.67);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
