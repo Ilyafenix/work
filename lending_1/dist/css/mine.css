@@ -414,3 +414,184 @@ a:hover {
 .says_section .says_carousel .text__says_carousel .coursor button:hover i {
   color: rgba(0, 0, 0, 0.67);
 }
+.brand_section .brand_line1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand_section .brand_line1 img {
+  margin: 0 60px;
+}
+.brand_section .brand_line2 {
+  margin-top: 40px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form_section {
+  background-image: url(../img/Bg_form.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form_section .form .form_container {
+  background-color: rgba(2, 22, 35, 0.71);
+  box-shadow: 0px 0px 30px 0px rgba(21, 21, 21, 0.12);
+  padding: 38px 31px;
+  height: 500px;
+}
+.form_section .form .form_container form input,
+.form_section .form .form_container form textarea {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 51px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  resize: none;
+  margin-bottom: 10px;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.form_section .form .form_container form input:hover,
+.form_section .form .form_container form textarea:hover,
+.form_section .form .form_container form input:focus,
+.form_section .form .form_container form textarea:focus {
+  outline: none;
+}
+.form_section .form .form_container form input::-webkit-input-placeholder,
+.form_section .form .form_container form textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.form_section .form .form_container form input::-moz-placeholder,
+.form_section .form .form_container form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.form_section .form .form_container form input:-moz-placeholder,
+.form_section .form .form_container form textarea:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.form_section .form .form_container form input:-ms-input-placeholder,
+.form_section .form .form_container form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.form_section .form .form_container form input::-webkit-input-placeholder,
+.form_section .form .form_container form textarea::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input::-moz-placeholder,
+.form_section .form .form_container form textarea::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:-moz-placeholder,
+.form_section .form .form_container form textarea:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:-ms-input-placeholder,
+.form_section .form .form_container form textarea:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:focus::-webkit-input-placeholder,
+.form_section .form .form_container form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:focus::-moz-placeholder,
+.form_section .form .form_container form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:focus:-moz-placeholder,
+.form_section .form .form_container form textarea:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input:focus:-ms-input-placeholder,
+.form_section .form .form_container form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.form_section .form .form_container form input[type="submit"] {
+  width: auto;
+  border-radius: 2px;
+  background-color: #6eeee4;
+  padding: 10px 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 20px;
+}
+.form_section .adress .adress_container {
+  background-color: rgba(2, 22, 35, 0.71);
+  box-shadow: 0px 0px 30px 0px rgba(21, 21, 21, 0.12);
+  padding: 20px 18px;
+  height: 500px;
+  overflow: hidden;
+}
+.form_section .adress .adress_container p {
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.form_section .adress .adress_container p span {
+  margin-top: 20px;
+}
+footer {
+  background-color: #262b2e;
+  padding: 90px 0;
+}
+footer .footer_text h4 {
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+footer .footer_text .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 19px;
+  margin-bottom: 40px;
+}
+footer .footer_text .social a {
+  display: inline-block;
+  background-color: rgba(138, 138, 138, 0.4);
+  width: 46px;
+  height: 40px;
+  color: #faf5f5;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: left;
+  transform: scaleY(1.0139);
+  text-decoration: none;
+  text-align: center;
+  margin: 0 4px;
+}
+footer .footer_text .social a:hover {
+  background-color: #71f6eb;
+  color: #000000;
+}
+footer .footer_text p {
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 25px;
+}
