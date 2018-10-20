@@ -66,7 +66,42 @@ a:hover {
                 }
             }
             .menu {
-                a {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                .menu-nav {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    height: 30px;
+
+
+
+                    .menu-nav__link {
+                        width: auto;
+                        text-decoration: none;
+                        margin-right: 20px;
+                        color: rgba(0, 0, 0, 0.6);
+                    }
+
+                    .menu-nav__link {
+                        transition: 0.5s;
+                        transform-origin: right center;
+                        transform: translateX(20px);
+                        opacity: 0;
+                    }
+                    .menu-nav__link_active {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
+                }
+
+
+                .menu-btn {
                     display: block;
                     width: 30px;
                     height: 30px;
@@ -86,14 +121,28 @@ a:hover {
                     span::before,
                     span::after {
                         content: '';
+                        display: block;
+                        transition: 0.5s;
 
                     }
 
                     span::before {
-                        transform: translateY(-9px)
+                        transform: translateY(-9px);
                     }
                     span::after {
-                        transform: translateY(9px)
+                        transform: translateY(9px);
+                    }
+                }
+                
+                .menu-btn_active {
+                    span {
+                        height: 0;
+                    }
+                    span::before {
+                        transform: rotate(45deg);
+                    }
+                    span::after {
+                        transform: rotate(-45deg);
                     }
                 }
             }
@@ -654,7 +703,7 @@ footer {
                 margin: 0 4px;
                 &:hover {
                     background-color: #71f6eb;
-                    color:  #000000;
+                    color: #000000;
 
                 }
             }
