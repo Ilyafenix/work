@@ -212,17 +212,17 @@ a:hover {
                 position: relative;
                 width: 60%;
                 margin: 0 auto;
-                height: 500px;  
+                height: 500px;
                 overflow: hidden;
-                &-img {
-                    width: 500%;
+                .slides {
+//                    width: 500%;
                     height: 400px;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
                     transition: all ease-out 3s;
                 }
-                &-item {
+                .slide {
                     width: 20%;
                     height: 400px;
                     margin: 0 auto;
@@ -230,6 +230,22 @@ a:hover {
                     img {
                         width: 100%;
                         height: 100%;
+                    }
+                }
+                .navigation {
+                    width: 70px;
+                    bottom: 10px;
+                    margin: 0 auto;
+                    position: absolute;
+                    .dot {
+                        width: 10px;
+                        height: 10px;
+                        background-color: #d0d0d0;
+                        float: left;
+                        margin: 2px;
+                    }
+                    .active {
+                        background-color: #71f6eb;
                     }
                 }
 
@@ -246,12 +262,13 @@ a:hover {
                         margin: 2px;
 
                     }
-                    
+
                     .active {
                         background-color: #71f6eb;
                     }
                 }
             }
+
         }
         .text__mine_section {
             padding: 0 30px;

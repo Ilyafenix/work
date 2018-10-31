@@ -1,6 +1,6 @@
 // анимация меню
 
-$('.menu-btn').on('click', function(e) {
+$('.menu-btn').on('click', function (e) {
     e.preventDefault;
     $(this).toggleClass('menu-btn_active');
     $('.menu-nav__link').toggleClass('menu-nav__link_active');
@@ -8,33 +8,88 @@ $('.menu-btn').on('click', function(e) {
 
 // скрипт плавного перехода по ссылкам
 
- $(document).ready(function(){
-    $("#menu").on("click","a", function (event) {
+$(document).ready(function () {
+    $("#menu").on("click", "a", function (event) {
         event.preventDefault();
-        var id  = $(this).attr('href'),
+        var id = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1000);
+        $('body,html').animate({
+            scrollTop: top
+        }, 1000);
     });
 });
 
 // получаем переменные для слайдера
-let sliderImg = document.getElementById("slider-img"),
-    dotsWrap = document.getElementsByClassName("slider-dots")[0],
-    dots = document.getElementsByClassName("dot"),
-    left = -400,
-    imgWidth = -200;
-// стартовая позиция для слайдера
-sliderImg.style.left = left + 'px';
+//let sliderImg = document.getElementById("slider-img"),
+//    dotsWrap = document.getElementsByClassName("slider-dots")[0],
+//    dots = document.getElementsByClassName("dot"),
+//    left = -400,
+//    imgWidth = -200;
+//// стартовая позиция для слайдера
+//sliderImg.style.left = left + 'px';
+//
+//// функция перелистывания
+//slideTo = (direction) => {
+//    if (direction == "left") {
+//        left = left - imgWidth;
+//    }
+//    if (direction == "right") {
+//        left = left + imgWidth;
+//    }
+//    if (left < -800) left = 0;
+//    if (left > 0) left = -800;
+//    sliderImg.style.left = left + 'px';
+//}
 
-// функция перелистывания
-slideTo = (direction) => {
-    if (direction == "left") {
-        left = left - imgWidth;
-    }
-    if (direction == "right") {
-        left = left + imgWidth;
-    }
-    if (left < -800) left = 0;
-    if (left > 0) left = -800;
-    sliderImg.style.left = left + 'px';
-}
+$(document).ready(function() { // Ждём загрузки страницы
+						   
+	var slides = $(".slider .slides").children(".slide"); // Получаем массив всех слайдов
+	var width = $(".slider .slides").width(); // Получаем ширину видимой области
+	var i = slides.length; // Получаем количество слайдов
+	var offset = i * width; // Задаем начальное смещение и ширину всех слайдов
+	var cheki = i-1;
+	
+	$(".slider .slides").css('width',offset); // Задаем блоку со слайдами ширину всех слайдов
+	
+	for (j=0; j < slides.length; j++) {
+		if (j==0) {
+			$(".slider .navigation").append("<div class='dot active'></div>");
+		}
+		else {
+			$(".slider .navigation").append("<div class='dot'></div>");
+		}
+	}
+	
+	var dots = $(".slider .navigation").children(".dot");
+	offset = 0; // Обнуляем смещение, так как показывается начала 1 слайд
+	i = 0; // Обнуляем номер текущего слайда
+	
+	$('.slider .navigation .dot').click(function(){
+		$(".slider .navigation .active").removeClass("active");								  
+		$(this).addClass("active");
+		i = $(this).index();
+		offset = i * width;
+		$(".slider .slides").css("transform","translate3d(-"+offset+"px, 0px, 0px)"); // Смещаем блок со слайдами к следующему
+	});
+	
+	
+	$("body .slider .next").click(function(){	// Событие клика на кнопку "следующий слайд"
+		if (offset < width * cheki) {	// Проверяем, дошли ли мы до конца
+			offset += width; // Увеличиваем смещение до следующего слайда
+			$(".slider .slides").css("transform","translate3d(-"+offset+"px, 0px, 0px)"); // Смещаем блок со слайдами к следующему
+			$(".slider .navigation .active").removeClass("active");	
+			$(dots[++i]).addClass("active");
+		}
+	});
+
+
+	$("body .slider .prev").click(function(){	// Событие клика на кнопку "предыдущий слайд"
+		if (offset > 0) { // Проверяем, дошли ли мы до конца
+			offset -= width; // Уменьшаем смещение до предыдущегоо слайда
+			$(".slider .slides").css("transform","translate3d(-"+offset+"px, 0px, 0px)"); // Смещаем блок со слайдами к предыдущему
+			$(".slider .navigation .active").removeClass("active");	
+			$(dots[--i]).addClass("active");
+		}
+	});
+
+});
