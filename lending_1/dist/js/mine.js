@@ -8,9 +8,64 @@ $('.menu-btn').on('click', function (e) {
 
 // раздел сервисы доп информация по нажатию
 
-$('.services_btn-more').on('click', function (e) {
+    // первый сервис
+$('#first-services_btn').on('click', function (e) {
     e.preventDefault;
-    $('.text_services').toggleClass('text_services_active');
+    $('#first-services_text').toggleClass('text_services_active');
+});
+$('#first-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#first-services_text').removeClass('text_services_active');
+});
+
+    //второй сервис
+$('#second-services_btn').on('click', function (e) {
+    e.preventDefault;
+    $('#second-services_text').toggleClass('text_services_active');
+});
+$('#second-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#second-services_text').removeClass('text_services_active');
+});
+
+    //третий сервис
+$('#third-services_btn').on('click', function (e) {
+    e.preventDefault;
+    $('#third-services_text').toggleClass('text_services_active');
+});
+$('#third-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#third-services_text').removeClass('text_services_active');
+});
+
+    //четвертый сервис
+$('#fourth-services_btn').on('click', function (e) {
+    e.preventDefault;
+    $('#fourth-services_text').toggleClass('text_services_active');
+});
+$('#fourth-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#fourth-services_text').removeClass('text_services_active');
+});
+
+    //пятый сервис
+$('#fifth-services_btn').on('click', function (e) {
+    e.preventDefault;
+    $('#fifth-services_text').toggleClass('text_services_active');
+});
+$('#fifth-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#fifth-services_text').removeClass('text_services_active');
+});
+
+    //шестой сервис
+$('#sixth-services_btn').on('click', function (e) {
+    e.preventDefault;
+    $('#sixth-services_text').toggleClass('text_services_active');
+});
+$('#sixth-services_exit-btn').on('click', function (e) {
+    e.preventDefault;
+    $('#sixth-services_text').removeClass('text_services_active');
 });
 
 // скрипт плавного перехода по ссылкам
@@ -80,3 +135,14 @@ $(document).ready(function() { // Ждём загрузки страницы
 	});
 
 });
+
+//наведение на профиль
+
+$('.profile_gallery .profile .disc_container').mouseenter(function(e) {
+    e.preventDefault; $(this).siblings(".img__profile").toggleClass('img__profile_active');
+});
+$('.profile_gallery .profile .disc_container').mouseleave(function(e) {
+    e.preventDefault; $(this).siblings(".img__profile").removeClass('img__profile_active');
+});
+
+

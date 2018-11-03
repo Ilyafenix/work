@@ -51,9 +51,16 @@ a:hover {
                 text-align: center;
                 text-transform: uppercase;
 
-                border-width: 5.54px;
-                border-color: #170f1c;
-                border-style: solid;
+
+                a {
+                    border-width: 5.54px;
+                    border-color: #170f1c;
+                    border-style: solid;
+
+                    line-height: 28px;
+                    color: #000000;
+                    padding: 10px 10px 8px 12px;
+                }
 
                 span {
                     font-family: Montserrat;
@@ -168,12 +175,17 @@ a:hover {
         .btn_space {
             margin-top: 15vh;
             .contact_btn {
-                border-radius: 2px;
-                border-width: 2px;
-                border-color: rgba(0, 0, 0, 0.5);
-                border-style: solid;
-                height: 50px;
+                //                border-radius: 2px;
+                //                border-width: 2px;
+                //                border-color: rgba(0, 0, 0, 0.5);
+                //                border-style: solid;
                 a {
+                    
+                    border-radius: 2px;
+                    border-width: 2px;
+                    border-color: rgba(0, 0, 0, 0.5);
+                    border-style: solid;
+                    padding: 15px 48px;
                     font-family: 'Montserrat', sans-serif;
                     color: #000000;
                     font-size: 18px;
@@ -184,7 +196,17 @@ a:hover {
 
 
                 }
+                a:hover {
+                    border-radius: 3px;
+                    background-color: #71f6eb;
+                    box-shadow: 3px 5px 11px 0px rgba(20, 20, 21, 0.1);
+                    width: 53px;
+                    i {
+                        color: rgba(0, 0, 0, 0.67);
+                    }
+                }
             }
+
             .glass_img {
                 padding-top: 10px;
                 position: relative;
@@ -215,11 +237,10 @@ a:hover {
                 height: 500px;
                 overflow: hidden;
                 .slides {
-//                    width: 500%;
+                    //                    width: 500%;
                     height: 400px;
                     position: absolute;
-                    top: 0%;
-//                    transform: translateY(-50%);
+                    top: 0%; //                    transform: translateY(-50%);
                     transition: all ease-out 1s;
                 }
                 .slide {
@@ -238,9 +259,9 @@ a:hover {
                     position: absolute;
                     display: flex;
                     justify-content: center;
-                    
+
                     .dot {
-                        
+
                         width: 10px;
                         height: 10px;
                         background-color: #d0d0d0;
@@ -338,7 +359,7 @@ a:hover {
                 }
             }
             .disc_services {
-                
+
                 z-index: 2;
                 position: absolute;
                 top: 0;
@@ -389,7 +410,7 @@ a:hover {
                     }
                 }
             }
-            
+
             &:hover .disc_services {
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -397,7 +418,7 @@ a:hover {
                 display: -o-flex;
                 display: flex;
             }
-            
+
             .text_services {
                 z-index: 3;
                 position: absolute;
@@ -459,7 +480,12 @@ a:hover {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
+                transition: 2s;
             }
+            .img__profile_active {
+                transform: scale(1.1);
+            }
+
             .disc_container {
                 position: absolute;
                 width: 100%;
@@ -470,6 +496,7 @@ a:hover {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                transition: 2s;
 
 
                 .disc__profile {
