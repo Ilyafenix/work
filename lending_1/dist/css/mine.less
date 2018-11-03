@@ -335,13 +335,14 @@ a:hover {
                 }
             }
             .disc_services {
+                
                 z-index: 2;
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 justify-content: flex-end;
                 padding: 65px;
@@ -385,6 +386,15 @@ a:hover {
                     }
                 }
             }
+            
+            &:hover .disc_services {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+            }
+            
             .text_services {
                 z-index: 3;
                 position: absolute;
@@ -397,6 +407,9 @@ a:hover {
                 justify-content: space-around;
                 padding: 65px;
                 background-color: rgba(109, 246, 235, 0.97);
+                &_active {
+                    display: flex;
+                }
 
                 h3 {
                     font-family: 'Merriweather', serif;
